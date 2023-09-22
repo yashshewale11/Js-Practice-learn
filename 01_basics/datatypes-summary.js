@@ -39,3 +39,26 @@ const myFunction=function(){
 console.log(typeof null );
 
 //https://262.ecma-international.org/5.1/#sec-11.4.3
+
+//-------------------------------------------------------------------------------------------------
+//Stack(Primitive),Heap(Non-Primitive)
+
+let myBlog="Learn-JS"
+
+let anotherBlog="SmartProgram"
+
+anotherBlog="JavaTechie"
+console.log(myBlog);
+console.log(anotherBlog);
+
+
+let userOne={
+    email:"yash@gmail.com",
+    upi: "yash11@hdfc.com"
+}
+
+let userTwo= userOne
+
+userTwo.email= "aksah@gmail.com"
+console.log(userOne.email);
+console.log(userTwo.email);
