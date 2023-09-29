@@ -4,18 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JavaScript Background Color Switcher</title>
-
-</head>
-<body>
-  <button class="button" id="grey">Grey</button>
-  <button class="button" id="white">White</button>
-  <button class="button" id="blue">Blue</button>
-  <button class="button" id="yellow">Yellow</button>
-
-  <script src="colorChange.js"></script>
-</body>
-<style>
-    
+  <style>
     button {
       border: none;
       padding: 0;
@@ -25,8 +14,13 @@
       font-weight: bold;
       text-transform: uppercase;
     }
-    
-    
+
+    .button-container {
+      display: flex;
+      justify-content: space-between; /* Adjust alignment as needed */
+      padding: 10px;
+    }
+
     .button {
       padding: 10px 20px;
       margin: 5px;
@@ -36,13 +30,25 @@
       color: #3498db;
       transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     }
-    
-    
+
     .button:hover {
-      background-color: #3498db;
+      background-color: black;
       color: #fff;
-      border-color: #2980b9;
+      border-color: black;
     }
-    
-      </style>
+
+    #grey {
+      order: 1; /* Change the order to move the Grey button to the right */
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <button class="button" id="grey">Grey</button>
+    <button class="button" id="white">White</button>
+    <button class="button" id="blue">Blue</button>
+    <button class="button" id="yellow">Yellow</button>
+  </div>
+  <script src="colorChange.js"></script>
+</body>
 </html>
